@@ -1,0 +1,15 @@
+public class Hello
+{
+	public static void main(String[] args)
+	{
+		//±äÁ¿Ãû
+		int a = 48;
+		char y = f(a);
+		System.out.print(y);
+	}
+	public static char f(int b)
+	{
+		char result = (char)b;
+		return result;
+	}
+}
