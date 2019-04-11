@@ -1,13 +1,12 @@
-package com.neuedu.test;
+package com.neuedu;
 
 public class Test {
-	int x;
-	int y;
-	public Test(int x,int y) 
+	
+	public static void mian(String[] args) 
 	{
 		
-		this.x = x;
-		this.y = y;
+		int a = 23;
+		int b = 32;
+		
 	}
-	
 }
