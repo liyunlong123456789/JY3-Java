@@ -1,14 +1,24 @@
-package com.neuedu.test;
+package com.neudeu.Polymorphism;
 
-public class Dog {
-	String dogName = "大宝";
-	int age = 4;
-	String gender = "女";
-	
+public class Dog implements Action,Action2{
+
 	@Override
-	public String toString() {
+	public void run() {
+		// TODO Auto-generated method stub
 		
-		return "二哈的名字:"+dogName+",二哈的年纪:"+age+",二哈的性别:"+gender;
 	}
+
+	@Override
+	public void jump() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
 }
-   

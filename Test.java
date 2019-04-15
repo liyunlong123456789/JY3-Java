@@ -1,12 +1,16 @@
-package com.neuedu;
+package com.neudeu.Polymorphism;
 
 public class Test {
-	
-	public static void mian(String[] args) 
-	{
+	public static void main(String[] args) {
+			ColorPrinter colorPrinter = new ColorPrinter();
+			colorPrinter.print();
+//			BlackPrinter blackPrinter = new BlackPrinter();
+//			blackPrinter.print();
 		
-		int a = 23;
-		int b = 32;
-		
+//		Printer p1 = new BlackPrinter();
+//		Printer p2 = new ColorPrinter();
+//		p1.print();
+//		p2.print();
 	}
+
 }
