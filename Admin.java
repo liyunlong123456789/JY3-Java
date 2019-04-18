@@ -1,15 +1,24 @@
 package com.neuedu.test;
-/*
- * 管理员类
- */
 
 public class Admin {
-	public Admin(String username,String password) 
+	public Admin() {}
+	public Admin(String username,String password)
 	{
-		this.username = username;
-		this.password = password;
+		this.userName = username;
+		this.passWord = password;
 	}
-	String username;
-	String password;
-
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassWord() {
+		return passWord;
+	}
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+	private String userName;
+	private String passWord;
 }

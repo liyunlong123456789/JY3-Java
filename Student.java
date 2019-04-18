@@ -1,43 +1,97 @@
 package com.neuedu.test;
-/*
- *学生类
- *id
- *姓名
- *性别
- *年龄
- *年级
- *地址
- *联系方式
- *电子邮箱
- */
 
-public class Student 
-{
-	public Student(int id,String name,char sex,short age,String grade,String address,int tel,String email) 
-	{
-		this.id = id;
-		this.name =name;
-		this.sex = sex;
-		this.age = age;
-		this.grade = grade;
-		this.address = address;
-		this.tel = tel;
-		this.email = email;
+public class Student {
+	public Student() {
 	}
-	
+
+	public Student(int id, String stuname, String stusex, int stuage, String stuGrade, String stuAddress, String stuTel,
+			String stuEmail) {
+		this.id = id;
+		this.stuName = stuname;
+		this.stusex = stusex;
+		this.stuage = stuage;
+		this.stuGrade = stuGrade;
+		this.stuAddress = stuAddress;
+		this.stuTel = stuTel;
+		this.stuEmail = stuEmail;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getStuName() {
+		return stuName;
+	}
+
+	public void setStuName(String stuName) {
+		this.stuName = stuName;
+	}
+
+	public String getStusex() {
+		return stusex;
+	}
+
+	public void setStusex(String stusex) {
+		this.stusex = stusex;
+	}
+
+	public int getStuage() {
+		return stuage;
+	}
+
+	public void setStuage(int stuage) {
+		this.stuage = stuage;
+	}
+
+	public String getStuGrade() {
+		return stuGrade;
+	}
+
+	public void setStuGrade(String stuGrade) {
+		this.stuGrade = stuGrade;
+	}
+
+	public String getStuAddress() {
+		return stuAddress;
+	}
+
+	public void setStuAddress(String stuAddress) {
+		this.stuAddress = stuAddress;
+	}
+
+	public String getStuTel() {
+		return stuTel;
+	}
+
+	public void setStuTel(String stuTel) {
+		this.stuTel = stuTel;
+	}
+
+	public String getStuEmail() {
+		return stuEmail;
+	}
+
+	public void setStuEmail(String stuEmail) {
+		this.stuEmail = stuEmail;
+	}
+
 	@Override
 	public String toString() {
-		return "id=" + id + ",名字=" + name + ", 性别=" + sex + ", 年龄=" + age + ", 班级=" + grade
-				+ ", 地址=" + address + ", 联系方式=" + tel + ", 邮箱地址=" + email + "]";
+		return "Student [学生id为" + id + ", 学生名字为=" + stuName + ", 性别  " + stusex + ", 年龄  " + stuage + ", 年级  "
+				+ stuGrade + ", 地址  " + stuAddress + ", 电话  " + stuTel + ", Email  " + stuEmail + "]";
 	}
 
-	int id;// id
-	String name;// 姓名
-	char sex;// 性别
-	short age;// 年龄
-	String grade;// 年级
-	String address;// 地址
-	int tel;// 联系方式
-	String email;// 电子邮箱
-
+	private int id;
+	private String stuName;
+	private String stusex;
+	private int stuage;
+	private String stuGrade;
+	private String stuAddress;
+	private String stuTel;
+	private String stuEmail;
 }
