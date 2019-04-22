@@ -1,97 +1,90 @@
-package com.neuedu.test;
+package com.neudeu.Test;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	public Student() {
+		
+	}
+	
+	public Student(String name, Integer age) {
+		this.name = name;
+		this.age = age;
 	}
 
-	public Student(int id, String stuname, String stusex, int stuage, String stuGrade, String stuAddress, String stuTel,
-			String stuEmail) {
-		this.id = id;
-		this.stuName = stuname;
-		this.stusex = stusex;
-		this.stuage = stuage;
-		this.stuGrade = stuGrade;
-		this.stuAddress = stuAddress;
-		this.stuTel = stuTel;
-		this.stuEmail = stuEmail;
+	private String name;
+	private Integer age;
+	public String getName() {
+		return name;
 	}
-
-	public int getId() {
-		return id;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	public Integer getAge() {
+		return age;
 	}
-
-	public String getStuName() {
-		return stuName;
-	}
-
-	public void setStuName(String stuName) {
-		this.stuName = stuName;
-	}
-
-	public String getStusex() {
-		return stusex;
-	}
-
-	public void setStusex(String stusex) {
-		this.stusex = stusex;
-	}
-
-	public int getStuage() {
-		return stuage;
-	}
-
-	public void setStuage(int stuage) {
-		this.stuage = stuage;
-	}
-
-	public String getStuGrade() {
-		return stuGrade;
-	}
-
-	public void setStuGrade(String stuGrade) {
-		this.stuGrade = stuGrade;
-	}
-
-	public String getStuAddress() {
-		return stuAddress;
-	}
-
-	public void setStuAddress(String stuAddress) {
-		this.stuAddress = stuAddress;
-	}
-
-	public String getStuTel() {
-		return stuTel;
-	}
-
-	public void setStuTel(String stuTel) {
-		this.stuTel = stuTel;
-	}
-
-	public String getStuEmail() {
-		return stuEmail;
-	}
-
-	public void setStuEmail(String stuEmail) {
-		this.stuEmail = stuEmail;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [学生id为" + id + ", 学生名字为=" + stuName + ", 性别  " + stusex + ", 年龄  " + stuage + ", 年级  "
-				+ stuGrade + ", 地址  " + stuAddress + ", 电话  " + stuTel + ", Email  " + stuEmail + "]";
+		return "Student [name=" + name + ", age=" + age + "]";
 	}
 
-	private int id;
-	private String stuName;
-	private String stusex;
-	private int stuage;
-	private String stuGrade;
-	private String stuAddress;
-	private String stuTel;
-	private String stuEmail;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((age == null) ? 0 : age.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (age == null) {
+			if (other.age != null)
+				return false;
+		} else if (!age.equals(other.age))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		
+		//return this.getAge() - o.getAge();//比较年龄，从小到大
+		return this.getName().compareTo(o.getName());//比较名字  
+	}
+
+	
+//	@Override
+//	public boolean equals(Object obj) {
+//		if(obj == null) 
+//		{
+//			return false;
+//		}
+//		if(obj instanceof Student)
+//		{
+//			Student stu = (Student)obj;
+//			if(this.name.equals(stu.getName()) && this.age == stu.getAge())
+//			{
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+	
+	
 }
